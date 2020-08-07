@@ -1,0 +1,20 @@
+﻿@model Student_management_system.Models.Batch
+
+
+<h2>Create</h2>
+<form method="post">
+    <div>
+        @Html.DisplayNameFor(a => a.batch)
+        <div>@Html.EditorFor(a => a.batch)</div>
+    </div>
+    <div>
+        @Html.DisplayNameFor(a => a.year)
+        <div>@Html.EditorFor(a => a.year)</div>
+    </div>
+    <div>
+        <button class="btn btn-primary">Create</button>
+    </div>
+    <div>@Html.ActionLink("Back to Index","Index",new { })</div>
+
+</form>
+

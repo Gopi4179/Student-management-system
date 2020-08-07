@@ -1,0 +1,72 @@
+﻿@model Student_management_system.Models.Registation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Registation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Course_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Batch_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Batch_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phoneno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phoneno)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

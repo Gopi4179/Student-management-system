@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Student_management_system.Models.Course>
+
+
+<h2>List of the Coures</h2>
+<div>
+    @Html.ActionLink("Create","Create",new { })
+</div>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(a=>a.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a=>a.course)
+            </th>
+            <th>
+                @Html.DisplayNameFor(a=>a.Duration)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach(var iteam in Model)
+       {
+        <tr>
+            <td>
+                @Html.DisplayFor(a => iteam.id)
+            </td>
+            <td>
+                @Html.DisplayFor(a => iteam.course)
+            </td>
+            <td>@Html.DisplayFor(a => iteam.Duration)</td>
+            <td>@Html.ActionLink("Details", "Details", new { id = iteam.id })</td>
+            <td>@Html.ActionLink("Update", "Update", new { id = iteam.id })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = iteam.id })</td>
+        </tr>
+       }
+    </tbody>
+   
+</table>
+

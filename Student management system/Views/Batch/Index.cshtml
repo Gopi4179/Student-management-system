@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Student_management_system.Models.Batch>
+
+
+<h2>Index</h2>
+<form method="get">
+    <div>@Html.ActionLink("Create","Create",new { })</div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(a => a.id)</th>
+                <th>@Html.DisplayNameFor(a => a.batch)</th>
+                <th>@Html.DisplayNameFor(a => a.year)</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var iteam in Model)
+            {
+            <tr>
+                <td>@Html.DisplayFor(a => iteam.id)</td>
+                <td>@Html.DisplayFor(a => iteam.batch)</td>
+                <td>@Html.DisplayFor(a => iteam.year)</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = iteam.id })</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { id = iteam.id })</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = iteam.id })</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</form>
+

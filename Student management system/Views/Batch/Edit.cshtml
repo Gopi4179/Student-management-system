@@ -1,0 +1,18 @@
+﻿@model Student_management_system.Models.Batch
+
+
+<h2>Edit</h2>
+<form method="post">
+    <div>
+        @Html.DisplayNameFor(a => a.batch)
+        <div>@Html.EditorFor(a => a.batch)</div>
+    </div>
+    <div>
+        @Html.DisplayNameFor(a => a.year)
+        <div>@Html.EditorFor(a => a.year)</div>
+    </div>
+    </br><br />
+    <div><button class="btn btn-success">Edit</button></div>
+
+</form>
+
