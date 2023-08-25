@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 variables:
   solution: '**/*.sln'
@@ -15,7 +15,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
+- task: UseDotNet@2
+  displayName: 'Install .NET Core SDK'
+  inputs:
+    version: 6.x
+    performMultiLevelLookup: true
+    includePreviewVersions: true # Required for preview versions
 
 - task: NuGetCommand@2
   inputs:
